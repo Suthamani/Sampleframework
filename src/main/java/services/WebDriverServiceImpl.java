@@ -290,7 +290,7 @@ public class WebDriverServiceImpl extends WebDriverEvents implements WebDriverSe
 		try {
 			
 			bReturn = ele.getAttribute("value");
-			if(bReturn.isBlank() | bReturn.isEmpty() | bReturn.equalsIgnoreCase("---") ){
+			if(bReturn.isEmpty() | bReturn.equalsIgnoreCase("---") ){
 				setReport().log(Status.PASS, field+" is Empty ",screenshotCapture());
 			}
 			else {
@@ -313,7 +313,7 @@ public class WebDriverServiceImpl extends WebDriverEvents implements WebDriverSe
 			try {
 				
 				bReturn = ele.getText();
-				if(bReturn.isBlank() | bReturn.isEmpty() | bReturn.equalsIgnoreCase("---") ){
+				if( bReturn.isEmpty() | bReturn.equalsIgnoreCase("---") ){
 					setReport().log(Status.PASS, field+" is Empty ",screenshotCapture());
 				}
 				else {
